@@ -27,36 +27,8 @@ h6,
   font-family: "Roboto", sans-serif;
 }
 
-/*Back to top button*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: aqua;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
-}
 
-.back-to-top i {
-  font-size: 24px;
-  color: black;
-  line-height: 0;
-}
 
-.back-to-top:hover {
-  background: #85b6cf;
-  color: black;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
 
 /*Header*/
 #header {
@@ -528,6 +500,134 @@ div.b {
   text-align: left;
 }
 
+h2{
+  margin-top: 50px;
+}
+
+.container-basketball {
+  position: relative;
+  width: 320px;
+  margin: auto 0 auto;
+  perspective: 10000px;
+}
+
+.carousel-basketball {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face-basketball {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+.carousel__face-basketball:nth-child(1) {
+  background-image: url("../../img/event center logo.jpg");
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face-basketball:nth-child(2) {
+  background-image: url("../../img/basketball5.jpg");
+  transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face-basketball:nth-child(3) {
+  background-image: url("../../img/basketball7.jpg");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face-basketball:nth-child(4) {
+  background-image: url("../../img/bobbybasketball.JPG");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face-basketball:nth-child(5) {
+  background-image: url("../../img/basketbal6.jpg");
+  transform: rotateY(160deg) translateZ(430px); }
+.carousel__face-basketball:nth-child(6) {
+  background-image: url("../../img/basketballl8.jpg");
+  transform: rotateY(200deg) translateZ(430px); }
+.carousel__face-basketball:nth-child(7) {
+  background-image: url("../../img/basketball2.jpg");
+  transform: rotateY(240deg) translateZ(430px); }
+.carousel__face-basketball:nth-child(8) {
+  background-image: url("../../img/basketball1.jpg");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face-basketball:nth-child(9) {
+  background-image: url("../../img/basketball champs.jpg");
+  transform: rotateY(320deg) translateZ(430px); }
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+/*Volleyball*/
+
+
+.Volleyball-title {
+  text-align: center;
+  padding-bottom: 10em;
+  padding-top: 5em;
+}
+
+.Volleyball-title h2 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  position: center;
+  background: transparent;
+  font-family: "JetBrains Mono ExtraBold";
+
+}
+
+.Volleyball-title h2::before {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 10px;
+  background: grey;
+  bottom: 10px;
+  left: calc(50% - 60px);
+}
+
+.Volleyball-title-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height:10px;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.basketball-title p {
+  margin-bottom: 0;
+}
+h4{
+  text-align: left;
+}
+
+h2{
+  margin-top: 50px;
+}
+
+.container-basketball {
+  position: relative;
+  width: 320px;
+  margin: auto 0 auto;
+  perspective: 10000px;
+}
 
 
 /*Athlete*/
@@ -595,75 +695,16 @@ div.b {
 }
 
 
-.container-basketball {
-  position: relative;
-  width: 320px;
-  margin: auto 0 auto;
-  perspective: 10000px;
+
+
+
+img.rounded-corners{
+  border-radius: 50px;
 }
+#zoomA:hover { transform: scale(2.2) }
 
-.carousel-basketball {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  animation: rotate360 60s infinite forwards linear;
-}
-.carousel__face-basketball {
-  position: absolute;
-  width: 300px;
-  height: 187px;
-  top: 20px;
-  left: 10px;
-  right: 10px;
-  background-size: cover;
-  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
-  display: flex;
-}
+#zoomB:hover { transform: scale(2.2) }
 
-span {
-  margin: auto;
-  font-size: 2rem;
-}
-.carousel__face-basketball:nth-child(1) {
-  background-image: url("../../img/event center logo.jpg");
-  transform: rotateY(  0deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(2) {
-  background-image: url("../../img/basketball5.jpg");
-  transform: rotateY( 40deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(3) {
-  background-image: url("../../img/basketball7.jpg");
-  transform: rotateY( 80deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(4) {
-  background-image: url("../../img/bobbybasketball.JPG");
-  transform: rotateY(120deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(5) {
-  background-image: url("../../img/basketbal6.jpg");
-  transform: rotateY(160deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(6) {
-  background-image: url("../../img/basketballl8.jpg");
-  transform: rotateY(200deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(7) {
-  background-image: url("../../img/basketball2.jpg");
-  transform: rotateY(240deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(8) {
-  background-image: url("../../img/basketball1.jpg");
-  transform: rotateY(280deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(9) {
-  background-image: url("../../img/basketball champs.jpg");
-  transform: rotateY(320deg) translateZ(430px); }
+#zoomC:hover { transform: scale(2.2) }
 
-@keyframes rotate360 {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(-360deg);
-  }
-}
-
-
-
-
-
-
+#zoomD:hover { transform: scale(2.2) }
