@@ -349,7 +349,7 @@ about-us {
 }
 
 .about-us-bg {
-  background-color: aqua;
+  background-color: transparent;
 }
 
 .about-us-title {
@@ -366,7 +366,7 @@ about-us {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: center;
-  background: aqua;
+  background: transparent;
   font-family: "JetBrains Mono ExtraBold";
 }
 
@@ -394,7 +394,7 @@ about-us {
   margin-bottom: 0;
 }
 p2{
-  color: white;
+  color: black;
 }
 
 
@@ -443,6 +443,13 @@ p2{
 }
 p2{
   color: white;
+}
+
+.container-gym {
+  position: relative;
+  width: 320px;
+  margin: auto 0 auto;
+  perspective: 10000px;
 }
 
 img.mySlides {
@@ -611,23 +618,7 @@ span {
   left: calc(50% - 20px);
 }
 
-.basketball-title p {
-  margin-bottom: 0;
-}
-h4{
-  text-align: left;
-}
 
-h2{
-  margin-top: 50px;
-}
-
-.container-basketball {
-  position: relative;
-  width: 320px;
-  margin: auto 0 auto;
-  perspective: 10000px;
-}
 
 
 /*Athlete*/
@@ -674,27 +665,6 @@ h2{
   line-height: 28px;
   margin-bottom: 0;
 }
-
-.athletes .icon-box-pink .icon {
-  background: lightgrey;
-}
-
-
-.athletes .icon-box-cyan .icon {
-  background: lightgrey;
-}
-
-
-.athletes .icon-box-green .icon {
-  background: lightgrey;
-}
-
-
-.athletes .icon-box-blue .icon {
-  background: lightgrey;
-}
-
-
 
 
 
