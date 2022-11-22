@@ -1,24 +1,28 @@
 
-/*General*/
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: black;
+  border: 2px solid black;
+  padding: 25px;
   background: linear-gradient(to right,whitesmoke, rgba(30, 67, 86, 0.6)),
-  url(../../img/maddie3.JPG)  center no-repeat;;
+  url(../../img/maddie3.jpg)  center no-repeat;
+  background-size: cover;
 }
-
 a {
-  color: black;
+  color:aqua;
   text-decoration: none;
 }
 
 a:hover {
-  color: aqua;
+  color:aqua;
   text-decoration: none;
 }
 
 h1,
-h2 ,
+h2,
 h3,
 h4,
 h5,
@@ -28,14 +32,10 @@ h6,
 }
 
 
-
-
-/*Header*/
 #header {
   height: 80px;
   transition: all 0.5s;
   z-index: 997;
-  transition: all 0.5s;
   background: aqua;
 }
 
@@ -73,10 +73,7 @@ h6,
 #main {
   margin-top: 80px;
 }
-
-/*Navigation Menu*/
-/**
-* Desktop Navigation*/
+/* top*/
 .navbar {
   padding: 0;
 }
@@ -101,7 +98,7 @@ h6,
   padding: 10px 0 10px 30px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  color: black;
+  color: white;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -120,7 +117,13 @@ h6,
   color: black;
 }
 
-/** Mobile Navigation */
+/*mobile*/
+
+.bi-list::before {
+  content: "\f479";
+}
+
+
 .mobile-nav-toggle {
   color: white;
   font-size: 28px;
@@ -165,7 +168,7 @@ h6,
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: white;
+  background-color: black;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -174,13 +177,13 @@ h6,
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #1e4356;
+  color: dodgerblue;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: aqua;
+  color: lightblue;
 }
 
 .navbar-mobile .getstarted,
@@ -188,86 +191,41 @@ h6,
   margin: 15px;
 }
 
-/* home */
-#home {
+
+
+
+/* aboutus*/
+#Main-slider {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
-}
-
-#home::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 130%;
-  height: 95%;
-  background: linear-gradient(to right, whitesmoke, rgba(30, 67, 86, 0.6)),
-  url(../../img/maddie3.JPG)  top center  no-repeat;
-  z-index: 0;
-  border-radius: 0 0 50% 50%;
-  transform: translateX(-50%) rotate(0deg);
-}
-
-#home::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 130%;
-  height: 96%;
-  background: aqua;
-  opacity: 0.3;
-  z-index: 0;
-  border-radius: 0 0 50% 50%;
-  transform: translateX(-50%) translateY(18px) rotate(2deg);
-}
-
-#home .carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   text-align: center;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
+#Main-slider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)),
+  url("../../img/maddie3.JPG") center top no-repeat;
+}
 
-#home h2 {
-  color: black;
-  margin-bottom: 30px;
+#Main-slider h2 {
+  color: white;
+  margin-bottom: 15px;
   font-size: 48px;
   font-weight: 700;
 }
 
-#home p {
-  width: 80%;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  margin: 0 auto 30px auto;
-  color: black;
-
+#Main-slider p {
+  color: white;
 }
 
-#home .carousel-control-prev,
-#home .carousel-control-next {
-  width: 10%;
-}
-
-#home .carousel-control-next-icon,
-#home .carousel-control-prev-icon {
-  background: none;
-  font-size: 48px;
-  line-height: 1;
-  width: auto;
-  height: auto;
-}
-
-#home .btn-get-started {
+#Main-slider .btn-get-started {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -284,397 +242,542 @@ h6,
   border: 2px solid aqua;
 }
 
-#home .btn-get-started:hover {
+#Main-slider .btn-get-started:hover {
   background: aqua;
-  color: white;
+  color:white;
   text-decoration: none;
 }
 
-@media (min-width: 1024px) {
-  #home p {
-    width: 60%;
-  }
-
-  #home.carousel-control-prev,
-  #home .carousel-control-next {
-    width: 5%;
-  }
-}
-
-@media (max-width: 768px) {
-  #home::after {
-    width: 180%;
-    height: 95%;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) rotate(0deg);
-  }
-
-  #home::before {
-    top: 0;
-    width: 180%;
-    height: 94%;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) translateY(20px) rotate(4deg);
-  }
-}
-
 @media (max-width: 575px) {
-  #home h2 {
+  #Main-slider h2 {
     font-size: 30px;
   }
-
-  #home::after {
-    left: 40%;
-    top: 0;
-    width: 200%;
-    height: 95%;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) rotate(0deg);
-  }
-
-  #home::before {
-    left: 50%;
-    top: 0;
-    width: 200%;
-    height: 94%;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) translateY(20px) rotate(4deg);
-  }
 }
 
-
-/* About us */
-about-us {
-  padding:  0;
-}
-
-.about-us-bg {
+.aboutus-bg {
   background-color: transparent;
 }
 
-.about-us-title {
+.aboutus {
   text-align: center;
-  padding-bottom: 0em;
-  padding-top: 0em;
+  padding-bottom: 30px;
 }
 
-
-
-.about-us-title h2 {
-  font-size: 50px;
+.aboutus h2 {
+  font-size: 28px;
   font-weight: 400;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  position: center;
-  background: transparent;
-  font-family: "JetBrains Mono ExtraBold";
+  position: relative;
 }
 
-.about-us-title h2::before {
+.aboutus h2::before {
+  content: "";
   position: absolute;
   display: block;
   width: 120px;
   height: 1px;
-  background: grey;
+  background: white;
   bottom: 1px;
   left: calc(50% - 60px);
 }
 
-.about-us-title h2::after {
+.aboutus h2::after {
   content: "";
   position: absolute;
   display: block;
   width: 40px;
   height: 3px;
+  background: aqua;
   bottom: 0;
   left: calc(50% - 20px);
 }
 
-.about-us-title p {
+.aboutus p {
   margin-bottom: 0;
 }
-p2{
-  color: black;
+
+
+.gym {
+  background-color: transparent;
 }
 
-
-/*GYM*/
-
-.gym-title {
+.gym {
   text-align: center;
-  padding-bottom: 0em;
-  padding-top: 0em;
-
+  padding-bottom: 30px;
 }
 
-.gym-title h2 {
-  font-size: 50px;
+.gym h2 {
+  font-size: 28px;
   font-weight: 400;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  position: center;
-  background: transparent;
-  font-family: "JetBrains Mono ExtraBold";
-
+  position: relative;
 }
 
-.gym-title h2::before {
+.gym h2::before {
+  content: "";
   position: absolute;
   display: block;
   width: 120px;
   height: 1px;
-  background: grey;
+  background: white;
   bottom: 1px;
   left: calc(50% - 60px);
 }
 
-.gym-title h2::after {
+.gym h2::after {
   content: "";
   position: absolute;
   display: block;
   width: 40px;
   height: 3px;
+  background: aqua;
   bottom: 0;
   left: calc(50% - 20px);
 }
 
-.gym-title p {
+.gym p {
   margin-bottom: 0;
 }
-p2{
-  color: white;
+
+
+
+
+
+.basketball {
+  background-color: transparent;
 }
 
-.container-gym {
-  position: relative;
-  width: 320px;
-  margin: auto 0 auto;
-  perspective: 10000px;
-}
-
-img.mySlides {
-  display:none;
-  width: 100%;
-  margin: 0px;
-}
-
-/*basketball*/
-
-.basketball-title {
+.basketball {
   text-align: center;
-  padding-bottom: 10em;
-  padding-top: 5em;
+  padding-bottom: 30px;
 }
 
-.basketball-title h2 {
-  font-size: 50px;
+.basketball h2 {
+  font-size: 28px;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding-bottom: 20px;
-  position: center;
-  background: transparent;
-  font-family: "JetBrains Mono ExtraBold";
-
+  position: relative;
 }
 
-.basketball-title h2::before {
+.basketball h2::before {
+  content: "";
   position: absolute;
   display: block;
   width: 120px;
-  height: 10px;
-  background: grey;
-  bottom: 10px;
+  height: 1px;
+  background: white;
+  bottom: 1px;
   left: calc(50% - 60px);
 }
 
-.basketball-title h2::after {
+.basketball h2::after {
   content: "";
   position: absolute;
   display: block;
   width: 40px;
-  height:10px;
+  height: 3px;
+  background: aqua;
   bottom: 0;
   left: calc(50% - 20px);
 }
 
-.basketball-title p {
+.basketball {
   margin-bottom: 0;
 }
-h4{
-  text-align: left;
-}
-div.b {
-  text-align: left;
-}
 
-h2{
-  margin-top: 50px;
-}
 
-.container-basketball {
+.bslider {
   position: relative;
-  width: 320px;
-  margin: auto 0 auto;
-  perspective: 10000px;
-}
-
-.carousel-basketball {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  animation: rotate360 60s infinite forwards linear;
-}
-.carousel__face-basketball {
-  position: absolute;
-  width: 300px;
-  height: 400px;
-  top: 20px;
-  left: 10px;
-  right: 10px;
-  background-size: cover;
-  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
-  display: flex;
-}
-
-span {
-  margin: auto;
-  font-size: 2rem;
-}
-.carousel__face-basketball:nth-child(1) {
-  background-image: url("../../img/event center logo.jpg");
-  transform: rotateY(  0deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(2) {
-  background-image: url("../../img/basketball5.jpg");
-  transform: rotateY( 40deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(3) {
-  background-image: url("../../img/basketball7.jpg");
-  transform: rotateY( 80deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(4) {
-  background-image: url("../../img/bobbybasketball.JPG");
-  transform: rotateY(120deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(5) {
-  background-image: url("../../img/basketbal6.jpg");
-  transform: rotateY(160deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(6) {
-  background-image: url("../../img/basketballl8.jpg");
-  transform: rotateY(200deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(7) {
-  background-image: url("../../img/basketball2.jpg");
-  transform: rotateY(240deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(8) {
-  background-image: url("../../img/basketball1.jpg");
-  transform: rotateY(280deg) translateZ(430px); }
-.carousel__face-basketball:nth-child(9) {
-  background-image: url("../../img/basketball champs.jpg");
-  transform: rotateY(320deg) translateZ(430px); }
-
-@keyframes rotate360 {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(-360deg);
-  }
-}
-
-/*Volleyball*/
-
-
-.Volleyball-title {
-  text-align: center;
-  padding-bottom: 10em;
-  padding-top: 5em;
-}
-
-.Volleyball-title h2 {
-  font-size: 50px;
-  font-weight: 400;
-  margin-bottom: 50px;
-  padding-bottom: 20px;
-  position: center;
-  background: transparent;
-  font-family: "JetBrains Mono ExtraBold";
-
-}
-
-.Volleyball-title h2::before {
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 10px;
-  background: grey;
-  bottom: 10px;
-  left: calc(50% - 60px);
-}
-
-.Volleyball-title-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40px;
-  height:10px;
-  bottom: 0;
-  left: calc(50% - 20px);
-}
-
-
-
-
-/*Athlete*/
-
-.athletes {
-  padding-bottom: 20px;
-}
-
-.athletes .icon-box {
-  padding: 30px;
-  position: relative;
+  display: grid;
+  place-items: center;
   overflow: hidden;
-  margin: 0 0 40px 0;
-  background: whitesmoke;
-  box-shadow: 0 5px 26px 0 rgba(68, 88, 144, 0.14);
-  transition: all 0.3s ease-in-out;
+}
+
+.bslide-track {
+  width: calc(500px * 8);
+  display: flex;
+  animation: scroll 50s linear infinite;
+  justify-content: space-between;
+}
+
+.freeze {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.bslide {
+  width: 400px;
+  height: 350px;
+  overflow: hidden;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orangered;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.freeze:hover .bslide {
+  filter: blur(3px);
+}
+.freeze .bslide:hover {
+  filter: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-200px * 10));
+  }
+}
+
+
+
+
+.volleyball{
+  background-color: transparent;
+}
+
+.volleyball {
   text-align: center;
-  border: 1px solid white;
+  padding-bottom: 30px;
 }
 
-.athletes .icon {
-  margin: 0 auto 20px auto;
-  padding-top: 17px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  width: 72px;
-  height: 72px;
+.volleyball h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
 }
 
-
-.athletes .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
+.volleyball h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: white;
+  bottom: 1px;
+  left: calc(50% - 60px);
 }
 
-.athletes .title a {
-  color: black;
+.volleyball h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: aqua;
+  bottom: 0;
+  left: calc(50% - 20px);
 }
 
-.athletes .description {
-  font-size: 15px;
-  line-height: 28px;
+.volleyball p {
   margin-bottom: 0;
 }
 
 
-
-img.rounded-corners{
-  border-radius: 50px;
+.slider {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
-#zoomA:hover { transform: scale(2.2) }
 
-#zoomB:hover { transform: scale(2.2) }
+.slide-track {
+  width: calc(400px * 20);
+  display: flex;
+  animation: scroll 50s linear infinite;
+  justify-content: space-between;
+}
 
-#zoomC:hover { transform: scale(2.2) }
+.freeze {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
 
-#zoomD:hover { transform: scale(2.2) }
+.slide {
+  width: 400px;
+  height: 350px;
+  overflow: hidden;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orangered;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.freeze:hover .slide {
+  filter: blur(3px);
+}
+.freeze .slide:hover {
+  filter: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-200px * 10));
+  }
+}
+
+/* athlete Reviews */
+
+.mycard {
+  height: 100%;
+  width: 100%;
+  max-width: 24rem;
+}
+.cardtitle {
+  font-weight: bold;
+  --tw-text-opacity: 1;
+  color: rgba(31, 41, 55, var(--tw-text-opacity));
+  text-align: center;
+}
+.cardimg {
+  margin: 2.75rem auto;
+  max-height: 10rem;
+  border-radius: 9999px;
+}
+.carddescription {
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+  text-align: center;
+}
+
+
+.gallery {
+  width: 100%;
+
+  min-height: 385px;
+}
+.gallery input {
+  display: none;
+}
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 375px;
+  perspective: 500px;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+.testimonials .item {
+  max-width: 20rem;
+  border-radius: 1.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgba(30, 58, 138, var(--tw-border-opacity));
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: grey;
+  padding: 30px;
+  width: 450px;
+  text-align: center;
+  transition: transform 0.4s;
+  -webkit-transform-style: preserve-3d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  cursor: pointer;
+}
+.testimonials .item img {
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid aqua;
+}
+.testimonials .item p {
+  color: black;
+}
+.testimonials .item h2 {
+  font-size: 14px;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dots label {
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: aqua;
+  margin: 7px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+/* First */
+#t-1:checked ~ .dots label[for="t-1"] {
+  transform: scale(2);
+  background-color: aqua;
+}
+#t-1:checked ~ .dots label[for="t-2"] {
+  transform: scale(1.5);
+}
+#t-1:checked ~ .testimonials label[for="t-1"] {
+  z-index: 4;
+}
+#t-1:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(300px) translateZ(-90px) translateY(-15px);
+
+  z-index: 3;
+}
+#t-1:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(600px) translateZ(-180px) translateY(-30px);
+  z-index: 2;
+}
+#t-1:checked ~ .testimonials label[for="t-4"] {
+  transform: translateX(900px) translateZ(-270px) translateY(-45px);
+  z-index: 1;
+}
+#t-1:checked ~ .testimonials label[for="t-5"] {
+  transform: translateX(1200px) translateZ(-360px) translateY(-60px);
+}
+
+/* Second */
+#t-2:checked ~ .dots label[for="t-1"] {
+  transform: scale(1.5);
+}
+#t-2:checked ~ .dots label[for="t-2"] {
+  transform: scale(2);
+  background-color: aqua;
+}
+#t-2:checked ~ .dots label[for="t-3"] {
+  transform: scale(1.5);
+}
+#t-2:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+}
+#t-2:checked ~ .testimonials label[for="t-2"] {
+  z-index: 3;
+}
+#t-2:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(300px) translateZ(-90px) translateY(-15px);
+  z-index: 2;
+}
+#t-2:checked ~ .testimonials label[for="t-4"] {
+  transform: translateX(600px) translateZ(-180px) translateY(-30px);
+  z-index: 1;
+}
+#t-2:checked ~ .testimonials label[for="t-5"] {
+  transform: translateX(900px) translateZ(-270px) translateY(-45px);
+}
+
+/* Third */
+#t-3:checked ~ .dots label[for="t-2"] {
+  transform: scale(1.5);
+}
+#t-3:checked ~ .dots label[for="t-3"] {
+  transform: scale(2);
+  background-color: aqua;
+}
+#t-3:checked ~ .dots label[for="t-4"] {
+  transform: scale(1.5);
+}
+#t-3:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+}
+#t-3:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+}
+#t-3:checked ~ .testimonials label[for="t-3"] {
+  z-index: 3;
+}
+#t-3:checked ~ .testimonials label[for="t-4"] {
+  transform: translateX(300px) translateZ(-90px) translateY(-15px);
+  z-index: 2;
+}
+#t-3:checked ~ .testimonials label[for="t-5"] {
+  transform: translateX(600px) translateZ(-180px) translateY(-30px);
+}
+
+/* Fourth */
+#t-4:checked ~ .dots label[for="t-3"] {
+  transform: scale(1.5);
+}
+#t-4:checked ~ .dots label[for="t-4"] {
+  transform: scale(2);
+  background-color: aqua;
+}
+#t-4:checked ~ .dots label[for="t-5"] {
+  transform: scale(1.5);
+}
+#t-4:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+}
+#t-4:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+}
+#t-4:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+  z-index: 2;
+}
+#t-4:checked ~ .testimonials label[for="t-4"] {
+  z-index: 3;
+}
+#t-4:checked ~ .testimonials label[for="t-5"] {
+  transform: translateX(300px) translateZ(-90px) translateY(-15px);
+}
+
+/* Fifth */
+#t-5:checked ~ .dots label[for="t-4"] {
+  transform: scale(1.5);
+}
+#t-5:checked ~ .dots label[for="t-5"] {
+  transform: scale(2);
+  background-color: aqua;
+}
+#t-5:checked ~ .testimonials label[for="t-1"] {
+  transform: translateX(-1200px) translateZ(-360px) translateY(-60px);
+}
+#t-5:checked ~ .testimonials label[for="t-2"] {
+  transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+  z-index: 1;
+}
+#t-5:checked ~ .testimonials label[for="t-3"] {
+  transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+  z-index: 2;
+}
+#t-5:checked ~ .testimonials label[for="t-4"] {
+  transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+  z-index: 3;
+}
+#t-5:checked ~ .testimonials label[for="t-5"] {
+  z-index: 4;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: aqua;
+  padding: 0 0 30px 0;
+  color: black;
+  font-size: 14px;
+}
+
