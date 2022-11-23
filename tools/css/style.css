@@ -8,7 +8,7 @@ body {
   border: 2px solid black;
   padding: 25px;
   background: linear-gradient(to right,whitesmoke, rgba(30, 67, 86, 0.6)),
-  url(../../img/maddie3.jpg)  center no-repeat;
+  url(../../img/image2.jpeg)  center right no-repeat;
   background-size: cover;
 }
 a {
@@ -211,7 +211,7 @@ h6,
   right: 0;
   bottom: 0;
   background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)),
-  url("../../img/maddie3.JPG") center top no-repeat;
+  url("../../img/maddie3.JPG") center top  no-repeat;
 }
 
 #Main-slider h2 {
