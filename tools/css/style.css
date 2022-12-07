@@ -7,7 +7,7 @@ body {
   color: black;
   border: 2px solid black;
   padding: 25px;
-  background: linear-gradient(to left,whitesmoke, rgba(30, 67, 86, 0.6)),
+  background: linear-gradient(to right,whitesmoke, rgba(30, 67, 86, 0.6)),
   url(../../img/image2.jpeg)   top right no-repeat;
   background-size: cover;
 }
